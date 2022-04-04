@@ -1,0 +1,113 @@
+
+.wrapper {
+
+    transition: 150ms linear;
+
+    background: var(--fabric-background-primary);
+    border-radius: 5px;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    max-width: 100%;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.dropdownLabel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header {
+
+    position: relative;
+
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    font-size: 1.2rem;
+
+    font-weight: 550;
+    color: var(--fabric-color-secondary);
+
+}
+
+.filter {
+    user-select: none;
+    outline: none;
+    background-color: var(--fabric-accent-color);
+    color: white;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    border-radius: 5px;
+
+    height: 30px;
+    width: fit-content;
+    cursor: pointer;
+
+    transition: 150ms linear;
+}
+
+.filter:hover {
+    opacity: .9;
+}
+
+.filter:active {
+    opacity: .7;
+    box-shadow: none;
+}
+
+
+.overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.fieldWrapper {
+    display: grid;
+    gap: 16px;
+    height: fit-content;
+
+}
+
+.selectWrapper {
+    display: flex;
+    gap: 8px;
+    font-size: .9rem;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    font-size: .7rem !important;
+    font-weight: 550;
+    height: 25px;
+    width: fit-content;
+    padding: 4px !important;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+}
+.filters{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}

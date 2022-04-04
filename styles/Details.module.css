@@ -1,0 +1,69 @@
+.modal {
+    height: 100%;
+    width: 100%;
+
+
+    color: var(--fabric-color-secondary);
+
+
+    display: grid;
+    align-content: flex-start;
+}
+
+.header {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-height: 35px;
+
+
+    border-bottom: var(--fabric-border-primary) 1px solid;
+}
+
+.label {
+    font-size: .75rem;
+    font-weight: bold;
+    padding-right: 10%;
+}
+
+.data {
+    font-size: .75rem;
+    font-weight: 550;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    padding: 4px !important;
+}
+
+.contentWrapper {
+    display: grid;
+    align-content: flex-start;
+    height: 100%;
+    /*background: red;*/
+}
+
+.wrapper {
+    /*height: 100% !important;*/
+    height: fit-content !important;
+
+}
+.empty{
+    width: 100%;
+    text-align: center;
+    font-size: .7rem;
+}
