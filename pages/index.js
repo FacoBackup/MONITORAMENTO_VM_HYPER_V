@@ -12,7 +12,7 @@ export default function Home({data}) {
     const [open, setOpen] = useState(0)
 
     return (
-        <VerticalTabs open={open}  setOpen={setOpen}>
+        <VerticalTabs open={open}  setOpen={setOpen} styles={{width: '100%'}}>
             <Tab label={'Máquinas virtuais'}>
                 <VMList redirect={router.push}/>
             </Tab>

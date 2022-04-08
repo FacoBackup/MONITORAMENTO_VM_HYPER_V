@@ -1,8 +1,0 @@
-
-.toolTip{
-    border-radius: 5px;
-    background: var(--fabric-background-primary);
-    box-shadow: var(--fabric-boxshadow);
-    color: var(--fabric-color-secondary);
-    width: fit-content;
-}

@@ -1,16 +1,17 @@
 import {Switcher} from "@f-ui/core";
 import styles from "../../styles/Home.module.css";
-import Vm from "../../pages/vm";
-import List from "../../ext/visualization/list/List";
-import KEYS from "../../templates/KEYS";
+
 import React, {useState} from "react";
-import useQuery from "../../ext/visualization/hooks/useQuery";
-import getQuery from "../getQuery";
+import getQuery from "../../ext/getQuery";
+
 import PropTypes from "prop-types";
 import FormTemplate from "../../ext/FormTemplate";
 import {STORAGE} from "../../templates/STORAGE";
-import useRequest from "../../ext/useRequest";
 import page from '../../public/page.json'
+import useQuery from "../../ext/hooks/useQuery";
+import useRequest from "../../ext/hooks/useRequest";
+import List from "../../ext/list/List";
+import {STORAGE_KEYS} from "../../templates/KEYS";
 
 export default function StorageList(props) {
     const [current, setCurrent] = useState()
@@ -36,7 +37,7 @@ export default function StorageList(props) {
                 handleClose={() => setCurrent(undefined)}/>
             <List
                 hook={hook}
-                keys={KEYS.STORAGE}
+                keys={STORAGE_KEYS}
                 createOption={true}
                 onCreate={() => setCurrent({})}
                 onRowClick={e => props.redirect(`storage?id=${e.id}`)}

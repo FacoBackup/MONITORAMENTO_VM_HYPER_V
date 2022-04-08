@@ -1,7 +1,6 @@
-import getQuery from "../components/getQuery";
-import KEYS from "./KEYS";
 
-export const GROUP = {
+
+export const GROUP = [{
     title: 'Informações básicas',
     groups: '2 1',
     rowGap: '4px',
@@ -37,4 +36,4 @@ export const GROUP = {
             customProps: {variant: 'area'}
         },
     ]
-}
+}]

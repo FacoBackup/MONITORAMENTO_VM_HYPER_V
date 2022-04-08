@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@f-ui/charts": "^0.0.1-alpha",
-    "@f-ui/core": "^0.1.26-alpha",
+    "@f-ui/core": "^0.1.32-alpha",
     "@fontsource/roboto": "^4.5.5",
     "axios": "^0.26.1",
     "next": "12.1.0",

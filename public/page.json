@@ -1,3 +1,4 @@
 {
-  "host": "http://localhost:5000"
+  "host": "http://192.168.1.251:80",
+  "authHost": "http://192.168.1.184:80"
 }

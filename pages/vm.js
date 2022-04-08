@@ -2,14 +2,14 @@ import styles from '../styles/Details.module.css'
 
 import {Button, Tab, VerticalTabs} from "@f-ui/core";
 import React, {useEffect, useState} from "react";
-import useRequest from "../ext/useRequest";
+import useQuery from "../ext/hooks/useQuery";
+import useRequest from "../ext/hooks/useRequest";
+import List from "../ext/list/List";
 import page from '../public/page.json'
 import FormTemplate from "../ext/FormTemplate";
 import {VM} from "../templates/VM";
 import {useRouter} from "next/router";
-import useQuery from "../ext/visualization/hooks/useQuery";
-import getQuery from "../components/getQuery";
-import List from "../ext/visualization/list/List";
+import getQuery from "../ext/getQuery";
 
 const keysNW = [{
     label: 'Nome', key: 'name', type: 'string', visible: true

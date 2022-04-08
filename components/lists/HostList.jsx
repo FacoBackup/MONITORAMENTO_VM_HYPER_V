@@ -1,12 +1,10 @@
-import {Switcher} from "@f-ui/core";
-import styles from "../../styles/Home.module.css";
-import Vm from "../../pages/vm";
-import List from "../../ext/visualization/list/List";
-import KEYS from "../../templates/KEYS";
+import useQuery from "../../ext/hooks/useQuery";
+import List from "../../ext/list/List";
 import React, {useState} from "react";
-import useQuery from "../../ext/visualization/hooks/useQuery";
-import getQuery from "../getQuery";
+import getQuery from "../../ext/getQuery";
+
 import PropTypes from "prop-types";
+import {HOST_KEYS} from "../../templates/KEYS";
 
 export default function HostList(props) {
     const [current, setCurrent] = useState()
@@ -17,7 +15,7 @@ export default function HostList(props) {
 
         <List
             hook={hook}
-            keys={KEYS.HOST}
+            keys={HOST_KEYS}
             onRowClick={e => {
                 console.trace(e)
                 props.redirect(`host?id=${e.name}`)

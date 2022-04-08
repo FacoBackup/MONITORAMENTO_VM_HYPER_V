@@ -1,18 +1,18 @@
-import List from "../../ext/visualization/list/List";
-import KEYS from "../../templates/KEYS";
+import useQuery from "../../ext/hooks/useQuery";
+import List from "../../ext/list/List";
 import React from "react";
-import useQuery from "../../ext/visualization/hooks/useQuery";
-import getQuery from "../getQuery";
+import getQuery from "../../ext/getQuery";
+
 import PropTypes from "prop-types";
+import {VM_KEYS} from "../../templates/KEYS";
 
 export default function VMList(props){
     const hook = useQuery(getQuery('vm'))
-
     return(
 
             <List
                 hook={hook}
-                keys={KEYS.VM}
+                keys={VM_KEYS}
                 onRowClick={e => props.redirect(`vm?id=${e.id}`)}
                 title={'Máquinas virtuais'}
             />

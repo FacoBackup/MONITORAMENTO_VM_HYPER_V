@@ -1,9 +1,9 @@
-import getQuery from "../components/getQuery";
-import KEYS from "./KEYS";
+import getQuery from "../ext/getQuery";
+import {GROUP_KEYS} from "./KEYS";
 
-export const HOST = {
+export const HOST =[ {
     title: 'Informações básicas',
-    groups: '2 1',
+    groups: '1 3 3',
     rowGap: '4px',
     columnGap: '16px',
     inputs: [
@@ -33,14 +33,6 @@ export const HOST = {
             width: '100%'
         },
         {
-            label: 'Espaço total disco',
-            placeHolder: 'Espaço total disco',
-            disabled: true,
-            key: 'disk',
-            type: 'text',
-            width: '100%'
-        },
-        {
             label: 'RAM',
             placeHolder: 'RAM',
             disabled: true,
@@ -48,11 +40,20 @@ export const HOST = {
             type: 'text',
             width: '100%'
         },
+        {
+            label: 'Espaço total disco',
+            placeHolder: 'Espaço total disco',
+           required: true,
+            key: 'disk',
+            type: 'text',
+            width: '100%'
+        },
+
 
         {
             label: 'Cluster',
             placeHolder: 'Cluster',
-            disabled: true,
+            required: true,
             key: 'cluster',
             type: 'text',
             width: '100%'
@@ -60,12 +61,11 @@ export const HOST = {
         {
             label: 'Volume',
             placeHolder: 'Volume',
-            disabled: true,
             key: 'storage',
             type: 'text',
             width: '100%',
             query: getQuery('storage'),
-            keys: KEYS.GROUP
+            keys: GROUP_KEYS
         }
     ]
-}
+}]

@@ -1,0 +1,3 @@
+[submodule "ext"]
+	path = ext
+	url = git@github.com:not-only-gateway/FABRIC-UI-EXT.git

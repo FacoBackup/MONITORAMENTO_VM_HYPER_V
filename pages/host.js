@@ -4,16 +4,16 @@ import styles from '../styles/Details.module.css'
 import {useRouter} from "next/router";
 import {Button, Tab, VerticalTabs} from "@f-ui/core";
 import FormTemplate from "../ext/FormTemplate";
-import {VM} from "../templates/VM";
-import List from "../ext/visualization/list/List";
 import page from "../public/page.json";
-import useRequest from "../ext/useRequest";
-import {STORAGE} from "../templates/STORAGE";
-import KEYS from "../templates/KEYS";
-import useQuery from "../ext/visualization/hooks/useQuery";
-import getQuery from "../components/getQuery";
+import {VM_KEYS} from "../templates/KEYS";
+import getQuery from "../ext/getQuery";
+
 import {HOST} from "../templates/HOST";
 
+
+import useQuery from "../ext/hooks/useQuery";
+import useRequest from "../ext/hooks/useRequest";
+import List from "../ext/list/List";
 
 export default function Host() {
     const [open, setOpen] = useState(0)
@@ -34,7 +34,8 @@ export default function Host() {
         }
     }, [router.isReady, router.query])
 
-    return (<div className={styles.modal}>
+    return (
+        <div className={styles.modal}>
             {entity !== undefined ? (<>
                     <h1 className={styles.header}>
                         <Button className={styles.button} variant={'outlined'} onClick={() => {
@@ -67,7 +68,7 @@ export default function Host() {
                             <List
                                 onRowClick={() => null}
                                 hook={hook}
-                                keys={KEYS.VM}
+                                keys={VM_KEYS}
                                 title={'Máquinas'}
                             />
                         </Tab>

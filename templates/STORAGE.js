@@ -1,7 +1,4 @@
-import getQuery from "../components/getQuery";
-import KEYS from "./KEYS";
-
-export const STORAGE=  {
+export const STORAGE=  [{
     title: 'Informações básicas',
     groups: '2 2',
     rowGap: '4px',
@@ -50,4 +47,4 @@ export const STORAGE=  {
             }
         },
     ]
-}
+}]

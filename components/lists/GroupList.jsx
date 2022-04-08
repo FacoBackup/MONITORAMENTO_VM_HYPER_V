@@ -1,17 +1,16 @@
 import {Switcher} from "@f-ui/core";
 import styles from "../../styles/Home.module.css";
-import Vm from "../../pages/vm";
-import List from "../../ext/visualization/list/List";
-import KEYS from "../../templates/KEYS";
+import useQuery from "../../ext/hooks/useQuery";
+import useRequest from "../../ext/hooks/useRequest";
+import List from "../../ext/list/List";
 import React, {useState} from "react";
-import useQuery from "../../ext/visualization/hooks/useQuery";
-import getQuery from "../getQuery";
+
 import PropTypes from "prop-types";
 import FormTemplate from "../../ext/FormTemplate";
 import page from "../../public/page.json";
-import {STORAGE} from "../../templates/STORAGE";
-import useRequest from "../../ext/useRequest";
 import {GROUP} from "../../templates/GROUP";
+import getQuery from "../../ext/getQuery";
+import {GROUP_KEYS} from "../../templates/KEYS";
 
 export default function GroupList(props){
     const [current, setCurrent] = useState()
@@ -40,7 +39,7 @@ export default function GroupList(props){
                 onCreate={() => setCurrent({})}
                 onRowClick={e => props.redirect(`group?id=${e.id}`)}
                 hook={hook}
-                keys={KEYS.GROUP}
+                keys={GROUP_KEYS}
                 options={[
                     {
                         label: 'Deletar',

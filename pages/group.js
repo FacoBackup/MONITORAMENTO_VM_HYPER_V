@@ -4,15 +4,15 @@ import styles from '../styles/Details.module.css'
 import {useRouter} from "next/router";
 import {Button, Tab, VerticalTabs} from "@f-ui/core";
 import FormTemplate from "../ext/FormTemplate";
-import {VM} from "../templates/VM";
-import List from "../ext/visualization/list/List";
 import page from "../public/page.json";
-import useRequest from "../ext/useRequest";
-import {STORAGE} from "../templates/STORAGE";
-import KEYS from "../templates/KEYS";
-import useQuery from "../ext/visualization/hooks/useQuery";
+import {VM_KEYS} from "../templates/KEYS";
+
 import getQuery from "../components/getQuery";
 import {GROUP} from "../templates/GROUP";
+
+import useQuery from "../ext/hooks/useQuery";
+import useRequest from "../ext/hooks/useRequest";
+import List from "../ext/list/List";
 
 
 export default function Group() {
@@ -67,7 +67,7 @@ export default function Group() {
                             <List
                                 onRowClick={() => null}
                                 hook={hook}
-                                keys={KEYS.VM}
+                                keys={VM_KEYS}
                                 title={'Máquinas'}
                             />
                         </Tab>

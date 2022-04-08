@@ -1,7 +1,8 @@
-import getQuery from "../components/getQuery";
-import KEYS from "./KEYS";
+import getQuery from "../ext/getQuery";
+import {GROUP_KEYS} from "./KEYS";
 
-export const VM = {
+
+export const VM = [{
     title: 'Informações básicas',
     groups: '3 2 3 3 2 2 1',
     rowGap: '4px',
@@ -149,7 +150,7 @@ export const VM = {
             type: 'text',
             width: '100%',
             query: getQuery('group'),
-            keys: KEYS.GROUP
+            keys: GROUP_KEYS
         },
         {
             label: 'Desativada',
@@ -164,4 +165,4 @@ export const VM = {
             width: '100%',
         },
     ]
-}
+}]

@@ -4,15 +4,15 @@ import styles from '../styles/Details.module.css'
 import {useRouter} from "next/router";
 import {Button, Tab, VerticalTabs} from "@f-ui/core";
 import FormTemplate from "../ext/FormTemplate";
-import {VM} from "../templates/VM";
-import List from "../ext/visualization/list/List";
 import page from "../public/page.json";
-import useRequest from "../ext/useRequest";
 import {STORAGE} from "../templates/STORAGE";
-import KEYS from "../templates/KEYS";
-import useQuery from "../ext/visualization/hooks/useQuery";
-import getQuery from "../components/getQuery";
+import {HOST_KEYS} from "../templates/KEYS";
+import getQuery from "../ext/getQuery";
 
+
+import useQuery from "../ext/hooks/useQuery";
+import useRequest from "../ext/hooks/useRequest";
+import List from "../ext/list/List";
 
 export default function Storage() {
     const [open, setOpen] = useState(0)
@@ -66,7 +66,7 @@ export default function Storage() {
                             <List
                                 onRowClick={() => null}
                                 hook={hook}
-                                keys={KEYS.HOST}
+                                keys={HOST_KEYS}
                                 title={'Hosts'}
                             />
                         </Tab>
