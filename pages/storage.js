@@ -57,6 +57,13 @@ export default function Storage() {
                         <Tab className={styles.contentWrapper} label={'Dados básicos'}>
                             <FormTemplate
                                 title={entity?.name}
+                                submit={(data) => {
+                                    make({
+                                        url: page.host + '/api/storage/' + data.id,
+                                        method: 'PUT',
+                                        data: {...data, used_space: parseFloat(data.used_space), space: parseFloat(data.space)}
+                                    })
+                                }}
                                 initial={entity}
                                 obj={STORAGE}
                             />

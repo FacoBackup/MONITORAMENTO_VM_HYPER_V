@@ -60,6 +60,13 @@ export default function Group() {
                                 title={entity?.name}
                                 initial={entity}
                                 obj={GROUP}
+                                submit={(data) => {
+                                    make({
+                                        url: page.host + '/api/group/' + data.id,
+                                        method: 'PUT',
+                                        data:data
+                                    })
+                                }}
                             />
                         </Tab>
 

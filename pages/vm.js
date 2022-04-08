@@ -84,6 +84,13 @@ export default function Vm() {
                             <FormTemplate
                                 title={entity?.name}
                                 initial={{...entity, created_on: (new Date(entity.created_on)).toString()}}
+                                submit={(data) => {
+                                    make({
+                                        url: page.host + '/api/vm/' + data.id,
+                                        method: 'PUT',
+                                        data: {...data, group: data.group?.id}
+                                    })
+                                }}
                                 obj={VM}/>
                         </Tab>
 

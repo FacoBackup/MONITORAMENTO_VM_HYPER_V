@@ -17,7 +17,7 @@ import List from "../ext/list/List";
 
 export default function Host() {
     const [open, setOpen] = useState(0)
-    const {make} = useRequest(false)
+    const {make} = useRequest(true)
     const router = useRouter()
     const [entity, setEntity] = useState()
 
@@ -60,6 +60,13 @@ export default function Host() {
                             <FormTemplate
                                 title={entity?.name}
                                 initial={entity}
+                                submit={(data) => {
+                                    make({
+                                        url: page.host + '/api/host/' + data.id,
+                                        method: 'PUT',
+                                        data: {...data, storage: data.storage?.id}
+                                    })
+                                }}
                                 obj={HOST}
                             />
                         </Tab>
